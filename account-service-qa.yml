@@ -1,0 +1,38 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:mysql://localhost:3306/captialsbank_qa}
+    username: ${SPRING_DATASOURCE_USERNAME:root}
+    password:  ${SPRING_DATASOURCE_PASSWORD:Pranathi@2005}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 5
+      connection-timeout: 20000
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  devtools:
+    restart:
+      enabled: false
+
+logging:
+  level:
+    root: INFO
+    com.insurance.account: DEBUG
+    org.springframework.web: INFO
+    org.hibernate.SQL: INFO
+
+accounts:
+  message: "welcome to the capitals bank related to QA apis"
+  contact-details:
+    name: "Ravi Kumar -QA Analyst"
+    email: "ravi.kumar@capitalsbank.com"
+    onCallSupport:
+      - "9876543210"
+      - "9876543211"
