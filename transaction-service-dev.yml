@@ -1,0 +1,44 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/captials_transactions
+    username: root
+    password: Pranathi@2005
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+    hikari:
+      pool-name: CapitalsTransactionPool
+      maximum-pool-size: 50
+      minimum-idle: 10
+      idle-timeout: 60000          # 1 minute
+      connection-timeout: 30000   # 30 seconds
+      max-lifetime: 1800000        # 30 minutes
+      leak-detection-threshold: 2000
+      auto-commit: true
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+
+  cloud:
+    openfeign:
+      client:
+        config:
+          capitals-bank:
+            connectTimeout: 5000
+            readTimeout: 5000
+
+transaction:
+  message: "welcome to the capitals bank transaction dev apis"
+  contactDetails:
+    name: "Ravi Kumar - Developer"
+    email: "Ravi.kumar@capitalsbank.com"
+    onCallSupport:
+      - "7684743900"
+      - "7684743901"
+
