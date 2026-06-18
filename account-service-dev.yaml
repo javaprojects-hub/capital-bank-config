@@ -1,0 +1,41 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:mysql://localhost:3306/captialsbank}
+    username: ${SPRING_DATASOURCE_USERNAME:root}
+    password: ${SPRING_DATASOURCE_PASSWORD:Pranathi@2005}
+    driver-class-name: ${SPRING_DATASOURCE_DRIVER_CLASS_NAME:com.mysql.cj.jdbc.Driver}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: ${SPRING_JPA_HIBERNATE_DDL_AUTO:update}
+    show-sql: true
+    properties:                             
+      hibernate:
+        format_sql: true
+  devtools:                                 
+    restart:
+      enabled: true
+
+logging:
+  level:
+    root: DEBUG
+    com.capital.captialsbank: DEBUG         
+    org.springframework.web: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql: TRACE
+
+accounts:
+  message: "welcome to the capitals bank related to dev apis"
+  contact-details:
+    name: "Pavan Kumar - Developer"
+    email: "pavan.kumar@capitalsbank.com"
+    onCallSupport:
+      - "9876543210"
+      - "9876543211"
+
+info:
+  app:
+    environment: Development
+  
