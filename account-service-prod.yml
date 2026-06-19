@@ -30,7 +30,7 @@ logging:
 accounts:
   message: "welcome to the capitals bank related to production apis"
   contact-details:
-    name: "Kumar N - Productio "
+    name: "Kumar N - Production"
     email: "kumarN@capitalsbank.com"
     onCallSupport:
       - "9876543210"
