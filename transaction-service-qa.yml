@@ -4,7 +4,7 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/captialsbank_qa
     username: root
-    password: Pranathi@2005
+    password: c6e24f77874b1173345e1ee506d44aa3b05796d556b8c68d58db632bc3639618
     driver-class-name: com.mysql.cj.jdbc.Driver
 
     hikari:
