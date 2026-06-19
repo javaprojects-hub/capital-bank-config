@@ -4,7 +4,7 @@ spring:
   datasource:
     url: ${SPRING_DATASOURCE_URL:jdbc:mysql://localhost:3306/captialsbank}
     username: ${SPRING_DATASOURCE_USERNAME:root}
-    password: ${SPRING_DATASOURCE_PASSWORD:c6e24f77874b1173345e1ee506d44aa3b05796d556b8c68d58db632bc3639618}
+    password: '{cipher}c6e24f77874b1173345e1ee506d44aa3b05796d556b8c68d58db632bc3639618'
     driver-class-name: ${SPRING_DATASOURCE_DRIVER_CLASS_NAME:com.mysql.cj.jdbc.Driver}
   jpa:
     open-in-view: false
