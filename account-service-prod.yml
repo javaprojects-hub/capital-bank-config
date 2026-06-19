@@ -4,7 +4,7 @@ spring:
   datasource:
     url:  ${SPRING_DATASOURCE_URL:jdbc:mysql://localhost:3306/captialsbank_prod}
     username: ${SPRING_DATASOURCE_USERNAME:root}     # always env variables in prod
-    password: ${SPRING_DATASOURCE_PASSWORD:Pranathi@2005}
+    password: ${SPRING_DATASOURCE_PASSWORD:c6e24f77874b1173345e1ee506d44aa3b05796d556b8c68d58db632bc3639618}
     driver-class-name: com.mysql.cj.jdbc.Driver
     hikari:
       maximum-pool-size: 20            # higher pool for prod load
