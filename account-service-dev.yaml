@@ -14,7 +14,7 @@ spring:
       ddl-auto: ${SPRING_JPA_HIBERNATE_DDL_AUTO:update}
 
 accounts:
-  message: "Welcome to Capitals Bank development APIs"
+  message: "Welcome to the updated Capitals Bank APIs"
 
   contact-details:
     name: "Pavan Kumar - Developer"
@@ -26,18 +26,18 @@ accounts:
 
   bank-details:
     bank-name: "Capitals Bank"
-    branch-name: "Hyderabad Main Branch"
-    ifsc-code: "CAPB0001001"
+    branch-name: "Bengaluru Technology Branch"
+    ifsc-code: "CAPB0002001"
 
     address:
-      building-name: "Capitals Bank Towers"
-      street: "Financial District Road"
-      area: "Nanakramguda"
-      city: "Hyderabad"
-      district: "Ranga Reddy"
-      state: "Telangana"
+      building-name: "Capitals Technology Centre"
+      street: "Outer Ring Road"
+      area: "Marathahalli"
+      city: "Bengaluru"
+      district: "Bengaluru Urban"
+      state: "Karnataka"
       country: "India"
-      postal-code: "500032"
+      postal-code: "560037"
 
 info:
   app:
