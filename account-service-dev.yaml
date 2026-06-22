@@ -1,41 +1,46 @@
 server:
   port: 8080
+
 spring:
   datasource:
     url: ${SPRING_DATASOURCE_URL:jdbc:mysql://localhost:3306/captialsbank}
     username: ${SPRING_DATASOURCE_USERNAME:root}
     password: '{cipher}c6e24f77874b1173345e1ee506d44aa3b05796d556b8c68d58db632bc3639618'
-    driver-class-name: ${SPRING_DATASOURCE_DRIVER_CLASS_NAME:com.mysql.cj.jdbc.Driver}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
   jpa:
     open-in-view: false
     hibernate:
       ddl-auto: ${SPRING_JPA_HIBERNATE_DDL_AUTO:update}
-    show-sql: true
-    properties:                             
-      hibernate:
-        format_sql: true
-  devtools:                                 
-    restart:
-      enabled: true
-
-logging:
-  level:
-    root: DEBUG
-    com.capital.captialsbank: DEBUG         
-    org.springframework.web: DEBUG
-    org.hibernate.SQL: DEBUG
-    org.hibernate.type.descriptor.sql: TRACE
 
 accounts:
-  message: "welcome to the capitals bank related to dev apis"
+  message: "Welcome to Capitals Bank development APIs"
+
   contact-details:
     name: "Pavan Kumar - Developer"
     email: "pavan.kumar@capitalsbank.com"
-    onCallSupport:
+    phone: "+91-9876543210"
+    on-call-support:
       - "9876543210"
       - "9876543211"
 
+  bank-details:
+    bank-name: "Capitals Bank"
+    branch-name: "Hyderabad Main Branch"
+    ifsc-code: "CAPB0001001"
+
+    address:
+      building-name: "Capitals Bank Towers"
+      street: "Financial District Road"
+      area: "Nanakramguda"
+      city: "Hyderabad"
+      district: "Ranga Reddy"
+      state: "Telangana"
+      country: "India"
+      postal-code: "500032"
+
 info:
   app:
-    environment: Development
-  
+    name: "Capitals Bank Account Service"
+    environment: "Development"
+    version: "1.0.0"
