@@ -1,19 +1,23 @@
 server:
   port: 8081
+
 spring:
+  application:
+    name: transaction-service
+
   datasource:
     url: jdbc:mysql://localhost:3306/captials_transactions
     username: root
-    password:c6e24f77874b1173345e1ee506d44aa3b05796d556b8c68d58db632bc3639618
+    password: c6e24f77874b1173345e1ee506d44aa3b05796d556b8c68d58db632bc3639618
     driver-class-name: com.mysql.cj.jdbc.Driver
 
     hikari:
       pool-name: CapitalsTransactionPool
       maximum-pool-size: 50
       minimum-idle: 10
-      idle-timeout: 60000          # 1 minute
-      connection-timeout: 30000   # 30 seconds
-      max-lifetime: 1800000        # 30 minutes
+      idle-timeout: 60000
+      connection-timeout: 30000
+      max-lifetime: 1800000
       leak-detection-threshold: 2000
       auto-commit: true
 
@@ -23,7 +27,7 @@ spring:
     show-sql: true
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.MySQL8Dialect
+        dialect: org.hibernate.dialect.MySQLDialect
 
   cloud:
     openfeign:
@@ -33,14 +37,6 @@ spring:
             connectTimeout: 5000
             readTimeout: 5000
 
-transaction:
-  message: "welcome to the capitals bank transaction dev apis"
-  contactDetails:
-    name: "Ravi Kumar - Developer"
-    email: "Ravi.kumar@capitalsbank.com"
-    onCallSupport:
-      - "7684743900"
-      - "7684743901"
 eureka:
   client:
     register-with-eureka: true
@@ -52,6 +48,15 @@ eureka:
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${server.port}:${random.value}
 
+transaction:
+  message: "welcome to the capitals bank transaction dev apis"
+  contactDetails:
+    name: "Ravi Kumar - Developer"
+    email: "Ravi.kumar@capitalsbank.com"
+    onCallSupport:
+      - "7684743900"
+      - "7684743901"
+
 management:
   endpoints:
     web:
@@ -60,4 +65,3 @@ management:
   endpoint:
     health:
       show-details: always
-
