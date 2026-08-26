@@ -25,12 +25,12 @@ accounts:
       - "9876543211"
 
   bank-details:
-    bank-name: "Capitals Bank"
+    bank-name: "Capitals Bank Info"
     branch-name: "Bengaluru Technology Branch"
     ifsc-code: "CAPB0002001"
 
     address:
-      building-name: "Capitals Technology Centre"
+      building-name: "Capitals Technology Centre IPT"
       street: "Beside Manyatha Tech Park"
       area: "Whitefield"
       city: "Bengaluru"
